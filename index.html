@@ -14,27 +14,30 @@
         <div>
             <ol>
                 <li>Go to <a href="https://beakerbrowser.com/install/">Beaker Browser's Install Page</a> and select the version that matches your system.<br>
-                Good Neighbors is a special kind of website called a Hyperdrive, and it <b>Will not work when viewed on any other web browser.<sup>1<sup></b>
+                Good Neighbors is a special kind of website called a Hyperdrive, and it <b>Will not work when viewed on any other web browser.<sup>*<sup></b>
                 </li>
                 <li>After your download finishes, go ahead and install Beaker.</li>
-                <li>Your first time launching beaker will prompt you to set up a profile. Do so.</li>
-                <li>Finally, all you have to do is copy the Good Neighbors Hyperdrive link into your beaker browser address bar.<br>
+                    <li>Set up your <em>Beaker Profile</em> when prompted after opening Beaker for the first time.</li>
+                <li>Finally, copy the <b>Good Neighbors Hyperdrive link<b> into your Beaker browser address bar.<br>
                     <button onclick="copyHyperdriveLink()">Click To Copy: </button> <span id=gnl>hyper://436fc8f73894f96276444f429d586e5cdbe21cb029e404bf564122a93e4693e0/</span>
                 </li>
                 <li>We recomend bookmarking Good Neighbors, and pinning it to your start page for easy access.</li>
                 <li>Enjoy getting to know your neighbors!</li>
             </ol>
         </div>
-        <p>1. Beaker Browser is a Peer to Peer web browser, just like Google Chrome or Firefox, 
+        <p>* Beaker Browser is a Peer to Peer web browser, just like Google Chrome or Firefox, 
         but with the cabability to share Hyperdrives between users. This means that if I want to see a Hyperdrive website, Beaker can get 
         it from a user that has already visited the site, in addition to going directly to the source. Hence, "Peer to Peer" or p2p. Good Neighbors relies heavily
         on Beaker's p2p features, and would not work without it.</p>
     </div>
     <script>
         function copyHyperdriveLink() {
-            let goodNeighborsLink = document.getElementById("gnl")
-            goodNeighborsLink.select()
-            document.execCommand("copy")
+            const el = document.createElement('textarea');
+          el.value = "hyper://436fc8f73894f96276444f429d586e5cdbe21cb029e404bf564122a93e4693e0/";
+          document.body.appendChild(el);
+          el.select();
+          document.execCommand('copy');
+          document.body.removeChild(el);
         }
     </script>
 </body>
