@@ -1,1 +1,41 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css><link href=https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css rel=stylesheet integrity=sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN crossorigin=anonymous><title>Employee Manager</title></head><body><div id=app></div><script src=http://code.jquery.com/jquery-3.3.1.min.js integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js></script><script type=text/javascript src=/static/js/manifest.2ae2e69a05c33dfc65f8.js></script><script type=text/javascript src=/static/js/vendor.39fb27d927545e8b94c9.js></script><script type=text/javascript src=/static/js/app.15f2f8b8bc2c6db7b15f.js></script></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css>
+    <link href=https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css rel=stylesheet integrity=sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN crossorigin=anonymous>
+    <title>Good Neighbors Join Instructions</title>
+</head>
+<body>
+    <div id=app class="container">
+        <h2>Thank you for your interest in Good Neighbors!</h2>
+        <p> There are just a couple quick steps to get started:</p>
+        <div>
+            <ol>
+                <li>Go to <a href="https://beakerbrowser.com/install/">Beaker Browser's Install Page</a> and select the version that matches your system.<br>
+                Good Neighbors is a special kind of website called a Hyperdrive, and it <b>Will not work when viewed on any other web browser.<sup>1<sup></b>
+                </li>
+                <li>After your download finishes, go ahead and install Beaker.</li>
+                <li>Your first time launching beaker will prompt you to set up a profile. Do so.</li>
+                <li>Finally, all you have to do is copy the Good Neighbors Hyperdrive link into your beaker browser address bar.<br>
+                    <button onclick="copyHyperdriveLink()">Click To Copy: </button> <span id=gnl>hyper://436fc8f73894f96276444f429d586e5cdbe21cb029e404bf564122a93e4693e0/</span>
+                </li>
+                <li>We recomend bookmarking Good Neighbors, and pinning it to your start page for easy access.</li>
+                <li>Enjoy getting to know your neighbors!</li>
+            </ol>
+        </div>
+        <p>1. Beaker Browser is a Peer to Peer web browser, just like Google Chrome or Firefox, 
+        but with the cabability to share Hyperdrives between users. This means that if I want to see a Hyperdrive website, Beaker can get 
+        it from a user that has already visited the site, in addition to going directly to the source. Hence, "Peer to Peer" or p2p. Good Neighbors relies heavily
+        on Beaker's p2p features, and would not work without it.</p>
+    </div>
+    <script>
+        function copyHyperdriveLink() {
+            let goodNeighborsLink = document.getElementById("gnl")
+            goodNeighborsLink.select()
+            document.execCommand("copy")
+        }
+    </script>
+</body>
+</html>
